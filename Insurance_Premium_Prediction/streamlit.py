@@ -32,7 +32,7 @@ def run_streamlit():
         # Perform the same preprocessing steps as in your training code
         df['sex'] = df['sex'].map({'male': 1, 'female': 0})
         df['smoker'] = df['smoker'].map({'yes': 1, 'no': 0})
-        df_encoded = pd.get_dummies(df_encoded, drop_first=False)
+        df_encoded = pd.get_dummies(df, drop_first=False)
         st.write('dummies is clear!')
         df_encoded = df_encoded.astype(float)
         st.write('Reached till here!')
