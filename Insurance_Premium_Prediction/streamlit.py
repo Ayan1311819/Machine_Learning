@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 import joblib
+import os
 # Load the trained model
 # Get the directory of the current script
 current_dir = os.getcwd()
