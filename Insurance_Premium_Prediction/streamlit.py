@@ -42,9 +42,9 @@ def run_streamlit():
         df = df.drop('region', axis=1)
     
     # Ensure all columns are float
-    df = df.astype(float)
-    prediction = model.predict(df)
-    st.success(f'Predicted Insurance Premium: ${prediction[0]:.2f}')
+        df = df.astype(float)
+        prediction = model.predict(df)
+        st.success(f'Predicted Insurance Premium: ${prediction[0]:.2f}')
 
 if __name__ == "__main__":
     run_streamlit()
