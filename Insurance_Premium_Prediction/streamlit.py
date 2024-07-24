@@ -4,7 +4,7 @@ from sklearn.linear_model import LinearRegression
 import joblib
 # Load the trained model
 # Get the directory of the current script
-current_dir = os.path.dirname(os.path.abspath(__file__))
+current_dir = os.getcwd()
 # Construct the path to the model file
 model_path = os.path.join(current_dir, 'my_model.joblib')
 model = joblib.load(model_path)  # Replace with the actual path to your trained model
