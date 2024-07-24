@@ -39,7 +39,7 @@ def run_streamlit():
         df['region_southwest'] = (df['region'] == 'southwest').astype(int)
     
     # Drop the original 'region' column
-    df = df.drop('region', axis=1)
+        df = df.drop('region', axis=1)
     
     # Ensure all columns are float
     df = df.astype(float)
