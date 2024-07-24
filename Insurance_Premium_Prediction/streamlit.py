@@ -32,14 +32,19 @@ def run_streamlit():
         # Perform the same preprocessing steps as in your training code
         df['sex'] = df['sex'].map({'male': 1, 'female': 0})
         df['smoker'] = df['smoker'].map({'yes': 1, 'no': 0})
-        df_encoded = pd.get_dummies(df, drop_first=False)
-        st.write('dummies is clear!')
-        df_encoded = df_encoded.astype(float)
-        st.write('Reached till here!')
-        # Make prediction
-        prediction = model.predict(df_encoded)
-        st.write('Reached till here also')
-        st.success(f'Predicted Insurance Premium: ${prediction[0]:.2f}')
+        # Manually create one-hot encoded columns for region
+        df['region_northeast'] = (df['region'] == 'northeast').astype(int)
+        df['region_northwest'] = (df['region'] == 'northwest').astype(int)
+        df['region_southeast'] = (df['region'] == 'southeast').astype(int)
+        df['region_southwest'] = (df['region'] == 'southwest').astype(int)
+    
+    # Drop the original 'region' column
+    df = df.drop('region', axis=1)
+    
+    # Ensure all columns are float
+    df = df.astype(float)
+    prediction = model.predict(df_encoded)
+    st.success(f'Predicted Insurance Premium: ${prediction[0]:.2f}')
 
 if __name__ == "__main__":
     run_streamlit()
