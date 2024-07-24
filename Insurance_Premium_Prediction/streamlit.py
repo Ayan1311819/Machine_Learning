@@ -2,9 +2,8 @@ import streamlit as st
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 import joblib
-
 # Load the trained model
-model = joblib.load('/content/drive')  # Replace with the actual path to your trained model
+model = joblib.load('my_model.joblib')  # Replace with the actual path to your trained model
 
 def run_streamlit():
     st.title('Insurance Premium Prediction')
