@@ -30,9 +30,9 @@ def run_streamlit():
         df = pd.DataFrame(data, index=[0])
 
         # Perform the same preprocessing steps as in your training code
-        df['sex'] = df['sex'].map({'male': 1, 'female': 0})
-        df['smoker'] = df['smoker'].map({'yes': 1, 'no': 0})
-        df_encoded = pd.get_dummies(df, drop_first=False)
+        df_encoded['sex'] = df['sex'].map({'male': 1, 'female': 0})
+        df_encoded['smoker'] = df['smoker'].map({'yes': 1, 'no': 0})
+        df_encoded = pd.get_dummies(df_encoded, drop_first=False)
         df_encoded = df_encoded.astype(float)
 
         # Make prediction
