@@ -15,7 +15,7 @@ def run_streamlit():
     bmi = st.number_input('BMI', min_value=10.0, max_value=50.0, value=25.0)
     children = st.number_input('Number of Children', min_value=0, max_value=10, value=0)
     smoker = st.selectbox('Smoker', ['yes', 'no'])
-    region = st.selectbox('Region', ['region_northeast', 'region_northwest', 'region_southeast', 'region_southwest'])
+    region = st.selectbox('Region', ['northeast', 'northwest', 'southeast', 'southwest'])
 
     if st.button('Predict Premium'):
         # Create a dataframe from input
