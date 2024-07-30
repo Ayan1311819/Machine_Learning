@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from sklearn.linear_model import LinearRegression
+from sklearn.ensemble import GradientBoostingRegressor
 import joblib
 
 model = joblib.load('Insurance_Premium_Prediction/my_model.joblib') 
