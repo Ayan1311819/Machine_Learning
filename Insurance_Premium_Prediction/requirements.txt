@@ -2,4 +2,4 @@ streamlit
 pandas
 scikit-learn
 joblib
-sklearn.ensemble._gb_losses
+sklearn.ensemble
