@@ -3,7 +3,7 @@ import pandas as pd
 from sklearn.ensemble import GradientBoostingRegressor
 import joblib
 
-model = joblib.load('Insurance_Premium_Prediction/my_model.joblib') 
+model = joblib.load('Insurance_Premium_Prediction/my_model (2).joblib') 
 
 def run_streamlit():
     st.title('Insurance Premium Prediction')
