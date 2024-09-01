@@ -2,7 +2,11 @@ import streamlit as st
 import tensorflow as tf
 from PIL import Image
 import numpy as np
+import gdown
 
+url = f'https://drive.google.com/file/d/1-AQGIP_4wIGacaTcHmNg0WdbzvXFwk8W/view?usp=sharing'
+output = 'my_model.h5'
+gdown.download(url, output, quiet=False)
 model = tf.keras.models.load_model('my_model.h5')
 
 # Function to preprocess the image
