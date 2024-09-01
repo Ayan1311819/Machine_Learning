@@ -43,4 +43,6 @@ if uploaded_file is not None:
     st.write("Classifying...")
     processed_image = preprocess_image(image)
     prediction = model.predict(processed_image)
-    st.write(f'Prediction: {mclass[{np.argmax(prediction)}]}')
+    pred = np.argmax(prediction)
+    P = mclass[pred]
+    st.write(f'Prediction: {P}')
