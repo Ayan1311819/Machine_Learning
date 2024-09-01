@@ -3,12 +3,18 @@ import tensorflow as tf
 from PIL import Image
 import numpy as np
 import gdown
+import os
 
 url = f'https://drive.google.com/file/d/1-AQGIP_4wIGacaTcHmNg0WdbzvXFwk8W/view?usp=sharing'
 output = 'my_model.h5'
 gdown.download(url, output, quiet=False)
 model = tf.keras.models.load_model('my_model.h5')
 
+# Check if the file exists
+if os.path.exists(output):
+    print("File downloaded successfully")
+else:
+    print("Failed to download file")
 # Function to preprocess the image
 def preprocess_image(image):
     image = image.resize((227, 227))
