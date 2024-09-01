@@ -38,11 +38,11 @@ uploaded_file = st.file_uploader("Choose an image...", type="jpg")
 
 if uploaded_file is not None:
     image = Image.open(uploaded_file)
-    st.image(image, caption='Uploaded Image.', use_column_width=True)
+    st.image(image, caption='Uploaded Image.', use_column_width=244)
     st.write("")
     st.write("Classifying...")
     processed_image = preprocess_image(image)
     prediction = model.predict(processed_image)
     pred = np.argmax(prediction)
     P = mclass[pred]
-    st.write(f'Prediction: {P}')
+    st.markdown(f'<p style="color:green; font-size:24px;">Prediction: {P}</p>', unsafe_allow_html=True)
