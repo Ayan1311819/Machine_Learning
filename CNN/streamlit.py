@@ -10,12 +10,20 @@ url = f'https://drive.google.com/uc?id={file_id}'
 output = 'my_model.h5'
 gdown.download(url, output, quiet=False)
 model = tf.keras.models.load_model('my_model.h5')
-
-# Check if the file exists
-if os.path.exists(output):
-    print("File downloaded successfully")
-else:
-    print("Failed to download file")
+mclass = ['Corn: Common Rust',
+  'Corn: Gray Leaf Spot',
+  'Corn: Healthy',
+  'Corn: Leaf Blight',
+  'Potato: Early Blight',
+  'Potato: Healthy',
+  'Potato: Late Blight',
+  'Rice: Brown Spot',
+  'Rice: Healthy',
+  'Rice: Hispa',
+  'Rice: Leaf Blast',
+  'Wheat: Brown Rust',
+  'Wheat: Healthy',
+  'Wheat: Yellow Rust']
 # Function to preprocess the image
 def preprocess_image(image):
     image = image.resize((227, 227))
@@ -35,4 +43,4 @@ if uploaded_file is not None:
     st.write("Classifying...")
     processed_image = preprocess_image(image)
     prediction = model.predict(processed_image)
-    st.write(f'Prediction: {np.argmax(prediction)}')
+    st.write(f'Prediction: mclass[np.argmax(prediction)]')
