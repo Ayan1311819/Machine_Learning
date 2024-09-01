@@ -5,7 +5,8 @@ import numpy as np
 import gdown
 import os
 
-url = f'https://drive.google.com/file/d/1-AQGIP_4wIGacaTcHmNg0WdbzvXFwk8W/view?usp=sharing'
+file_id = '1-AQGIP_4wIGacaTcHmNg0WdbzvXFwk8W'
+url = f'https://drive.google.com/uc?id={file_id}'
 output = 'my_model.h5'
 gdown.download(url, output, quiet=False)
 model = tf.keras.models.load_model('my_model.h5')
