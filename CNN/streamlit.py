@@ -45,4 +45,4 @@ if uploaded_file is not None:
     prediction = model.predict(processed_image)
     pred = np.argmax(prediction)
     P = mclass[pred]
-    st.markdown(f'<p style="color:green; font-size:24px;">Prediction: {P}</p>', unsafe_allow_html=True)
+    sst.success(f'Disease Prediction : {P}')
