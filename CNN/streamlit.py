@@ -33,7 +33,7 @@ def preprocess_image(image):
     return image
   
 # Streamlit
-st.title('CNN Model Deployment with Streamlit')
+st.title('CNN Model Deployment')
 uploaded_file = st.file_uploader("Choose an image...", type="jpg")
 
 if uploaded_file is not None:
