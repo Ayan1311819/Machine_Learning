@@ -2,8 +2,6 @@ import streamlit as st
 import tensorflow as tf
 from PIL import Image
 import numpy as np
-import gdown
-import os
 
 file_id = '1-AQGIP_4wIGacaTcHmNg0WdbzvXFwk8W'
 url = f'https://drive.google.com/uc?id={file_id}'
