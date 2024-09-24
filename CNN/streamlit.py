@@ -24,7 +24,7 @@ mclass = ['Corn: Common Rust',
   'Wheat: Yellow Rust']
 # Function to preprocess the image
 def preprocess_image(image):
-    image = image.resize((227, 227))
+    image = image.resize((256, 256))
     image = np.array(image)
     image = image / 255.0
     image = np.expand_dims(image, axis=0)
