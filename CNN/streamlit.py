@@ -6,7 +6,7 @@ import gdown
 import os
 
 
-model = tf.keras.models.load_model('Amodel_full.h5')
+model = tf.keras.models.load_model('Amodel_full.keras')
 
 mclass = ['Corn: Common Rust',
   'Corn: Gray Leaf Spot',
