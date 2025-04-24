@@ -11,7 +11,10 @@ Each category has 3-4 disease categories. For example:
 - Rice: Healthy
 - Rice: Hispa 
 # Cleaning Data and preprocessing
-
+1)Basic data cleaning: like getting rid of corrupt images or large image files (>6MB)
+2)Rescaling the images
+3)**Class Mode:** The `class_mode` parameter in `flow_from_directory` is set to `categorical` for multi-class classification, where the target variable represents multiple categories.
+  **Color Mode:** The `color_mode` parameter in `flow_from_directory` is set to `"rgb"` to ensure that the images are loaded in color with three channels (Red, Green, and Blue). This is crucial for deep learning models that leverage color information for analysis and classification.
 # Recipe for a Machine Learning algorithm
 1) Data specification (input prob, output)
 Input: Consists of images of various crops. Will be passed to the model as 3d tensor(rgb values)
