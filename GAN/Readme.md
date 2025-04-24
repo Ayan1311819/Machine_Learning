@@ -1,6 +1,6 @@
 # Main objective
 
-The main objective is to just understand autoencoder networks. 
+The main objective is to just understand a basic adversarial network. 
 
 
 # Dataset
