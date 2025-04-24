@@ -28,7 +28,8 @@ Architechure: CNN based on Alexnet architechure.(Moved from 16 million parameter
 Implementation: handled by keras.
 Class weights: Because of data imbalance between classes.
 
-# Results : Training accuracy:96,  Validation accuracy:93 
+# Results
+Training accuracy:96,  Validation accuracy:93 
 
 # Future Improvements
 1) Model design : Could try models for categrozing the major categories first and then diff models for each category's disease classification.
