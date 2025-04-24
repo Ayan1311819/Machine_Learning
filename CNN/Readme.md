@@ -24,18 +24,18 @@ Each category has 3-4 disease categories. For example:
 Input: Consists of images of various crops. Will be passed to the model as 3d tensor(rgb values)
 
 Output: Classifying images into disease classes. (softmax at output layer)
-3) Cost Function (metrics->cost function) + regularization
+2) Cost Function (metrics->cost function) + regularization
 Metrics: Using metrics like accuracy, precision, recall, and F1-score to evaluate the model's performance.
 
 Cost Function: Categorical cross entropy
 
 Regularization: Applied data augmentation techniques(like rotation,shear,zoom,) to prevent overfitting.
-5) Optimization procedure
+3) Optimization procedure
 
 Adam optimizer 
 
 Learning rate: Found one manually. 
-6) Model
+4) Model
 
 Architechure: CNN based on Alexnet architechure.(Moved from 16 million parameter model to 200k to 800k now)
 
