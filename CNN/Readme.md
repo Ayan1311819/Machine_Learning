@@ -19,22 +19,30 @@ Each category has 3-4 disease categories. For example:
 
   **Color Mode:** The `color_mode` parameter in `flow_from_directory` is set to `"rgb"` to ensure that the images are loaded in color with three channels (Red, Green, and Blue). This is crucial for deep learning models that leverage color information for analysis and classification.
 # Recipe for a Machine Learning algorithm
+
 1) Data specification (input prob, output)
 
 Input: Consists of images of various crops. Will be passed to the model as 3d tensor(rgb values)
 
 Output: Classifying images into disease classes. (softmax at output layer)
+
+
 2) Cost Function (metrics->cost function) + regularization
+
 Metrics: Using metrics like accuracy, precision, recall, and F1-score to evaluate the model's performance.
 
 Cost Function: Categorical cross entropy
 
 Regularization: Applied data augmentation techniques(like rotation,shear,zoom,) to prevent overfitting.
+
+
 3) Optimization procedure
 
 Adam optimizer 
 
 Learning rate: Found one manually. 
+
+
 4) Model
 
 Architechure: CNN based on Alexnet architechure.(Moved from 16 million parameter model to 200k to 800k now)
